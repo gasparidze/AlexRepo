@@ -50,4 +50,30 @@ public class Human {
     public Human(){
         System.out.println("hello world");
     }
+
+    /**
+     * Структура метода:
+     * 1) модификатор доступа
+     * 2) тип возвращаемого значения, если метод ничего не возвращает, то пишем void
+     * 3) название метода
+     * 4) входные параметры формата: <тип данных1> <название переменной1>, .., <тип данныхN> <название переменнойN>
+     * 5) тело метода, указывается в фигурных скобках
+     * также: если тип возвращаемого значения отличен от void, то обязательно указываем в теле return <value>,
+     * где value - некоторое значение того типа, который мы указали
+     *
+     */
+    public void test(String name){
+        System.out.println("hello from " + name);
+    }
+
+    /**
+     * перегрузка методов - возможность java указывать методы с одинаковым названием, но разной сигнатурой
+     */
+    public void test(String name, int age){
+        System.out.println("hello from " + name);
+    }
+
+    public String callMethod(String name, int age){
+        return "hello from " + name + " age:" + age;
+    }
 }
